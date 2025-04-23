@@ -1,0 +1,23 @@
+{
+  "name": "@bangnokia/aghanim",
+  "version": "1.0.0",
+  "description": "Frontend assets for Aghanim Laravel package",
+  "main": "dist/aghanim.js",
+  "types": "dist/aghanim.d.ts",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite"
+  },
+  "keywords": ["laravel", "inertia", "react", "typescript"],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "@inertiajs/react": "^1.0.0",
+    "@types/react": "^18.2.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.0.0",
+    "vite": "^5.0.0"
+  }
+}
