@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Inertia\Inertia;
 
-class AghanimActionController extends Controller
+class AghanimActionController
 {
     public function handle(Request $request)
     {

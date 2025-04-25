@@ -35,10 +35,11 @@ class GenerateAghanimActions extends Command
 
     protected function generateTypeScript(array $actions): string
     {
-        $methods = collect($actions)->map(fn($class) => {
-            $name = Str::camel(class_basename($class));
-            return "  $name(...params: any[]): Promise<any>;";
-        })->implode("\n");
+        $methods = collect($actions)
+            ->map(function ($class) {
+                $name = Str::camel(class_basename($class));
+                return "  $name(...params: any[]): Promise<any>;";
+            })->implode("\n");
 
         return "export const aghanim = {\n  actions: {\n$methods\n  }\n};";
     }
