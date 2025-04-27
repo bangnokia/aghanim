@@ -1,5 +1,7 @@
 # Aghanim
 
+This is not working yet
+
 Enhance your Laravel + Inertia.js apps with **Aghanim**, a package that brings the power of Aghanim’s Scepter to your frontend-backend interactions. Call Laravel Actions from React with a single line—like casting a spell: `aghanim.actions.getAllUsers()`. No custom APIs, just pure magic.
 
 ## Installation
