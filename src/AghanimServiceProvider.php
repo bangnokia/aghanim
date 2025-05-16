@@ -2,16 +2,32 @@
 
 namespace BangNokia\Aghanim;
 
-use Illuminate\Support\ServiceProvider;
 use BangNokia\Aghanim\Console\Commands\GenerateAghanimActions;
+use BangNokia\Aghanim\Security\ActionAuthorizer;
+use Illuminate\Support\ServiceProvider;
 
 class AghanimServiceProvider extends ServiceProvider
 {
+    /**
+     * Register any application services.
+     *
+     * @return void
+     */
     public function register()
     {
         $this->mergeConfigFrom(__DIR__.'/../config/aghanim.php', 'aghanim');
+
+        // Register the ActionAuthorizer
+        $this->app->singleton(ActionAuthorizer::class, function ($app) {
+            return new ActionAuthorizer();
+        });
     }
 
+    /**
+     * Bootstrap any application services.
+     *
+     * @return void
+     */
     public function boot()
     {
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
